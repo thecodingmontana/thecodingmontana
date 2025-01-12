@@ -1,4 +1,4 @@
-# Hi there, I'm @thecodingmontana! 🌐
+# Hi 👋 My name is Christopher Odhiambo
 
 I'm a passionate software developer from Kenya with a keen interest in building robust, user-friendly, and scalable applications
 
