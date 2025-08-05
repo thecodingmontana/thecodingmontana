@@ -1,3 +1,4 @@
+
 # Hi 👋 I'm Christopher Odhiambo
 
 ## 🚀 Full-Stack Developer | Frontend Specialist | SaaS Builder
@@ -52,29 +53,30 @@
 
 ## 🏆 Featured Projects
 
-### 🔥 [KreativeStores](https://www.kreativestores.com) - SaaS Creator Platform
-**Tech**: Nuxt.js, Vue, Express.js, TypeScript, Tailwind CSS  
-**Impact**: Empowering content creators with scalable monetization tools  
-- Built comprehensive SaaS platform for content creator management
-- Implemented tools for content scheduling, campaign tracking, and payout analytics
-- Designed customizable store pages with scalable architecture for large user bases
-- [🔗 Live Demo](https://www.kreativestores.com)
+Here are some of the key projects I've built:
 
-### 🌟 [Apiwap](https://apiwap.com) - WhatsApp Automation Platform  
-**Tech**: Vue.js, Express.js, TypeScript, WebSocket, REST API  
-**Impact**: Streamlining business communication with automated messaging  
-- Developed API-first WhatsApp automation platform for businesses
-- Built real-time WebSocket interface for live message updates
-- Created role-based dashboard with comprehensive stats and message logs
-- [🔗 Live Demo](https://apiwap.com)
+- **[Zadaci](https://zadaci.vercel.app)**  
+  **Tech**: Nuxt.js, TypeScript, Tailwind CSS, Supabase  
+  **Impact**: Modern project and task management platform designed as a Trello/Asana alternative  
+  - Enables teams to manage projects, tasks, subtasks, and timelines with ease
+  - Includes workspace management, status tracking, and a support knowledge base  
+  - [🔗 Live Demo](https://zadaci.vercel.app)
 
-### 💡 [Convertle](https://convertle.vercel.app) - Universal Media Converter
-**Tech**: Next.js, React, FFmpeg, TypeScript, Tailwind CSS  
-**Impact**: Zero-limits media conversion directly in browser  
-- Built all-in-one media conversion tool supporting images, videos, and audio
-- Integrated FFmpeg for accurate and fast conversions without server dependency
-- Implemented smooth UX with Next.js App Router and modern UI components
-- [🔗 Live Demo](https://convertle.vercel.app) | [📱 GitHub](https://github.com/thecodingmontana/convertle)
+- **[KreativeStores](https://www.kreativestores.com)**  
+  **Tech**: Nuxt.js, Vue, Express.js, TypeScript, Tailwind CSS  
+  **Impact**: Empowering content creators with scalable monetization tools  
+  - Built comprehensive SaaS platform for content creator management  
+  - Implemented tools for content scheduling, campaign tracking, and payout analytics  
+  - Designed customizable store pages with scalable architecture for large user bases  
+  - [🔗 Live Demo](https://www.kreativestores.com)
+
+- **[Apiwap](https://apiwap.com)**  
+  **Tech**: Vue.js, Express.js, TypeScript, WebSocket, REST API  
+  **Impact**: Streamlining business communication with automated messaging  
+  - Developed API-first WhatsApp automation platform for businesses  
+  - Built real-time WebSocket interface for live message updates  
+  - Created role-based dashboard with comprehensive stats and message logs  
+  - [🔗 Live Demo](https://apiwap.com)
 
 ---
 
@@ -107,7 +109,7 @@ I'm always excited to collaborate on innovative projects and contribute to teams
 
 **📧 Email**: [thecodingmontana@gmail.com]  
 **💼 LinkedIn**: [https://www.linkedin.com/in/christopher-odhiambo-9a8b82369/]  
-**🌐 Portfolio**: [https://codewithmontana.vercel.app]
+**🌐 Portfolio**: [https://codewithmontana.vercel.app]  
 **📱 Twitter**: [https://x.com/@codewithmontana]
 
 ---
