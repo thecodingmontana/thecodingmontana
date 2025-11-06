@@ -86,7 +86,7 @@ Here are some of the key projects I've built:
 
 ![](https://github-readme-stats.vercel.app/api?username=thecodingmontana&theme=react&hide_border=true&include_all_commits=true&count_private=true)
 
-![](https://github-readme-streak-stats.herokuapp.com/?user=thecodingmontana&theme=react&hide_border=true)
+[![GitHub Streak](https://streak-stats.demolab.com?user=thecodingmontana)](https://git.io/streak-stats)
 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=thecodingmontana&theme=react&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
