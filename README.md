@@ -80,20 +80,6 @@ Here are some of the key projects I've built:
 
 ---
 
-## 📈 GitHub Analytics
-
-<div align="center">
-
-![](https://github-readme-stats.vercel.app/api?username=thecodingmontana&theme=react&hide_border=true&include_all_commits=true&count_private=true)
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=thecodingmontana)](https://git.io/streak-stats)
-
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=thecodingmontana&theme=react&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
-
-</div>
-
----
-
 ## 🎯 Current Focus
 
 - 🔭 Building next-generation **SaaS platforms** with modern web technologies
