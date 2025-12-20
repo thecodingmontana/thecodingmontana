@@ -2,7 +2,7 @@ import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
-import appCss from "../styles.css?url";
+import appCss from "../styles/global.css?url";
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -35,7 +35,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<HeadContent />
 			</head>
-			<body>
+			<body className="min-h-screen bg-flexoki-bg text-flexoki-tx selection:bg-flexoki-bg-2 selection:text-primary">
 				{children}
 				<TanStackDevtools
 					config={{
