@@ -1,7 +1,9 @@
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import Footer from "@/components/navigations/footer";
 import Header from "@/components/navigations/header";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { seo } from "@/lib/seo";
 import appCss from "../styles/global.css?url";
@@ -53,9 +55,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				<HeadContent />
 			</head>
 			<body className="relative mx-auto flex min-h-screen max-w-8xl flex-col selection:bg-[#c8ff65] selection:text-primary">
-				<Toaster closeButton richColors />
-				<Header />
-				<div className="flex-1">{children}</div>
+				<ThemeProvider>
+					<Header />
+					<div className="flex-1">{children}</div>
+					<Toaster closeButton richColors />
+					<Footer />
+				</ThemeProvider>
 				<TanStackDevtools
 					config={{
 						position: "bottom-right",

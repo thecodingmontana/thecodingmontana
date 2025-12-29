@@ -671,8 +671,12 @@ export const techStack: TechStack[] = [
 		icon: "logos:vue",
 	},
 	{
+		name: "Hono",
+		icon: "logos:hono",
+	},
+	{
 		name: "React Query",
-		icon: "logos:react-query",
+		icon: "logos:react-query-icon",
 	},
 	{
 		name: "Vue Query",
