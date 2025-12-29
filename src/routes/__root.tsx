@@ -52,7 +52,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="relative mx-auto flex min-h-screen max-w-8xl flex-col overflow-hidden selection:bg-[#c8ff65] selection:text-primary">
+			<body className="relative mx-auto flex min-h-screen max-w-8xl flex-col selection:bg-[#c8ff65] selection:text-primary">
 				<Toaster closeButton richColors />
 				<Header />
 				<div className="flex-1">{children}</div>
