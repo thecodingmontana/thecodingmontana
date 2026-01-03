@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { IconGithub } from "../svgs/icons/github";
 import { IconHome } from "../svgs/icons/home";
+import { IconLinkedin } from "../svgs/icons/linkedin";
 import { IconTwitter } from "../svgs/icons/twitter";
 
 export default function Header() {
@@ -65,6 +66,17 @@ export default function Header() {
 									target="_blank"
 								>
 									<IconTwitter className="size-5" />
+								</a>
+							</li>
+							<li className="relative" data-slot="navigation-menu-item">
+								<a
+									className="group group inline-block h-9 w-max items-center justify-center rounded-full px-4 py-1.5 font-light text-sm text-white/70 outline-ring/50 ring-ring/10 transition-[text-shadow,color] duration-300 hover:text-white/85 focus-visible:outline-1 focus-visible:ring-4 disabled:pointer-events-none disabled:opacity-50 data-[active=true]:text-accent-foreground dark:outline-ring/40 dark:ring-ring/20"
+									data-radix-collection-item=""
+									href="https://www.linkedin.com/in/christopher-odhiambo-9a8b82369"
+									rel="noopener"
+									target="_blank"
+								>
+									<IconLinkedin className="size-5" />
 								</a>
 							</li>
 							<li className="relative">
