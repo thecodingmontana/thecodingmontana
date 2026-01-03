@@ -2,6 +2,53 @@ import type { Project, TechStack } from "@/types";
 
 export const projects: Project[] = [
 	{
+		name: "Zadaci",
+		tagline: "Say Hello 👋 to Effortless Project Management",
+		description:
+			"Zadaci is an all-in-one project management platform built to help you and your team get things done faster.",
+		highlights: [
+			"Built using Nuxt.js and TypeScript",
+			"Responsive design with shadcn-ui + Tailwind CSS",
+			"Supabase + PostgreSQL + Drizzle ORM for typed backend.",
+			"Fast load times and intuitive navigation optimized for mobile UX.",
+		],
+		stack: [
+			{
+				name: "Nuxt.js",
+				icon: "logos:nuxt-icon",
+			},
+			{
+				name: "TypeScript",
+				icon: "logos:typescript-icon",
+			},
+			{
+				name: "Supabase",
+				icon: "devicon:supabase",
+			},
+			{
+				name: "Drizzle ORM",
+				icon: "material-icon-theme:drizzle",
+			},
+			{
+				name: "Tailwind CSS",
+				icon: "logos:tailwindcss-icon",
+			},
+			{
+				name: "Shadcn UI",
+				icon: "vscode-icons:file-type-shadcn",
+			},
+			{
+				name: "PostgreSQL",
+				icon: "logos:postgresql",
+			},
+		],
+		github: "https://github.com/thecodingmontana/zadaci",
+		color: "#673ab7",
+		is_working: true,
+		image_url: "/images/zadaci.png",
+		website: "https://zadaci.vercel.app",
+	},
+	{
 		name: "Dogdom",
 		tagline:
 			"An elegant mobile app built for dog lovers, with smooth interactions and playful design.",
