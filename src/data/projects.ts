@@ -448,7 +448,7 @@ export const projects: Project[] = [
 		name: "Shop With Hawa",
 		tagline: "Where elegance meets performance in eCommerce.",
 		description:
-			"A sleek and powerful eCommerce platform designed for store owners and shoppers alike. With a Nest.js backend and Vue frontend, it combines robust authentication, flexible data handling, and a smooth UI powered by Tailwind CSS and Firebase.",
+			"A sleek and powerful eCommerce platform designed for store owners and shoppers alike.",
 		highlights: [
 			"Backend built using NestJS with JWT authentication.",
 			"Store admin data securely stored in MongoDB.",
