@@ -1,7 +1,7 @@
 import type React from "react";
 import type { Project } from "@/types";
 import { PosterCard } from "./poster-card";
-import type { useRibbon } from "./use-ribbon";
+import { CARD_ASPECT, type useRibbon } from "./use-ribbon";
 
 const CAPTION_SPACE_PX = 130;
 
@@ -39,7 +39,7 @@ export function Ribbon({ projects, ribbon, onOpen }: Props) {
 		>
 			<ul
 				className="relative overflow-x-clip"
-				style={{ height: metrics.cardW * 1.25 + CAPTION_SPACE_PX }}
+				style={{ height: metrics.cardW * CARD_ASPECT + CAPTION_SPACE_PX }}
 			>
 				{projects.map((project, index) => (
 					<PosterCard

@@ -80,12 +80,12 @@ export function PosterCard({
 					to="/"
 				>
 					<div
-						className="grain relative aspect-[4/5] overflow-hidden shadow-[0_1px_0_rgba(23,21,18,0.08)] transition-transform duration-300 ease-(--ease-out) group-hover:-translate-y-2"
+						className="relative aspect-[16/10] overflow-hidden rounded-[3px] shadow-[0_18px_30px_-18px_rgba(23,21,18,0.55)] transition-transform duration-300 ease-(--ease-out) group-hover:-translate-y-2"
 						style={{ backgroundColor: ink }}
 					>
 						<img
 							alt=""
-							className="border-paper absolute top-[46%] left-1/2 aspect-[16/10] w-[84%] -translate-x-1/2 -translate-y-1/2 rotate-(--print-tilt) border-[3px] object-cover object-top-left shadow-[0_14px_22px_-12px_rgba(23,21,18,0.6)] transition-[rotate,scale] duration-500 ease-(--ease-out) select-none group-hover:scale-[1.07] group-hover:rotate-0"
+							className="absolute inset-0 size-full object-cover object-top-left transition-transform duration-500 ease-(--ease-out) select-none group-hover:scale-[1.05]"
 							draggable={false}
 							height={500}
 							loading={index < 6 ? "eager" : "lazy"}
@@ -94,14 +94,13 @@ export function PosterCard({
 									? project.image_url
 									: `/${project.image_url}`
 							}
-							style={
-								{
-									"--print-tilt": `${tiltFor(index + 3) * 1.6}deg`,
-								} as React.CSSProperties
-							}
-							width={400}
+							width={800}
 						/>
-						<span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(255,255,255,0.5),transparent_62%)] opacity-0 transition-opacity duration-300 ease-(--ease-out) group-hover:opacity-100" />
+						{/* ink frame keeps each card tied to its riso colour */}
+						<span
+							className="pointer-events-none absolute inset-0 border-[5px]"
+							style={{ borderColor: ink }}
+						/>
 					</div>
 
 					<motion.div className="mt-4 pr-2" style={{ opacity: captionOpacity }}>
