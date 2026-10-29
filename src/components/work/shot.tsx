@@ -22,14 +22,15 @@ export function Shot({ project, sizes, className, alt = "", eager }: Props) {
 			className={className}
 			draggable={false}
 			// /_vercel/image only exists on Vercel, so dev serves the original file
+			// width must be one of SHOT_WIDTHS or the plain src 400s on Vercel
 			fallback={import.meta.env.PROD ? "vercel" : undefined}
-			height={1000}
+			height={1200}
 			layout="constrained"
 			loading={eager ? "eager" : "lazy"}
 			sizes={sizes}
 			src={src}
 			unstyled
-			width={1600}
+			width={1920}
 		/>
 	);
 }
