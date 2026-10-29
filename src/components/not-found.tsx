@@ -1,57 +1,36 @@
 import { Link } from "@tanstack/react-router";
-import "../styles/glitch.css";
-import { IconHome } from "./svgs/icons/home";
-import { ThemeToggle } from "./theme-toggle";
-import { Button } from "./ui/button";
+import { motion, useReducedMotion } from "motion/react";
 
 export default function NotFound() {
+	const reduce = useReducedMotion();
 	return (
-		<div className="relative flex min-h-screen items-center justify-center overflow-hidden p-4">
-			<ThemeToggle className="absolute top-5 right-5 rounded-full" />
-			<div className="mx-auto max-w-2xl space-y-8 text-center">
-				{/* Glitchy 404 Text */}
-				<div className="relative">
-					<h1 className="glitch-text text-9xl font-black text-transparent select-none md:text-[12rem]">
+		<main className="grid min-h-dvh place-items-center px-5">
+			<div className="flex flex-col items-center text-center">
+				<motion.div
+					animate={{ opacity: 1, transform: "translateY(0px) rotate(-3deg)" }}
+					className="grain bg-ember relative px-10 pt-4 pb-2"
+					initial={{
+						opacity: 0,
+						transform: reduce
+							? "rotate(-3deg)"
+							: "translateY(48px) rotate(4deg)",
+					}}
+					transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1] }}
+				>
+					<h1 className="text-[clamp(6rem,22vw,14rem)] leading-none font-extrabold tracking-[-0.06em]">
 						404
 					</h1>
-					<h1 className="glitch-text-shadow absolute inset-0 text-9xl font-black text-slate-100 select-none md:text-[12rem]">
-						404
-					</h1>
-					<h1 className="glitch-text-shadow-2 text-brand absolute inset-0 text-9xl font-black select-none md:text-[12rem]">
-						404
-					</h1>
-				</div>
-
-				{/* Glitchy Message */}
-				<div className="space-y-4">
-					<p className="glitch-message text-xl font-extralight md:text-2xl">
-						This page fell into the void.
-					</p>
-					<p className="glitch-subtitle text-sm font-extralight text-red-600 md:text-base">
-						{"// ERROR: Reality.exe has stopped working"}
-					</p>
-				</div>
-
-				{/* Glitchy Button */}
-				<div className="pt-4">
-					<Button
-						asChild
-						className="bg-brand hover:bg-brand-secondary text-white"
-						size="lg"
-					>
-						<Link className="flex items-center gap-2" to="/">
-							<IconHome className="h-4 w-4 transition-transform group-hover:scale-110" />
-							Back to Homepage
-						</Link>
-					</Button>
-				</div>
-
-				{/* Glitch Lines */}
-				<div className="pointer-events-none absolute inset-0">
-					<div className="glitch-line glitch-line-1" />
-					<div className="glitch-line glitch-line-2" />
-				</div>
+				</motion.div>
+				<p className="text-ink/60 mt-10 font-mono text-[11px] tracking-[0.16em] uppercase">
+					This print was never made
+				</p>
+				<Link
+					className="bg-ink text-paper mt-4 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-transform duration-150 ease-(--ease-out) active:scale-[0.97]"
+					to="/"
+				>
+					⟵ Back to the work
+				</Link>
 			</div>
-		</div>
+		</main>
 	);
 }

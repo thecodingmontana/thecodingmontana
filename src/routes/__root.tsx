@@ -1,11 +1,7 @@
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import Footer from "@/components/navigations/footer";
-import Header from "@/components/navigations/header";
 import NotFound from "@/components/not-found";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
 import { seo } from "@/lib/seo";
 import appCss from "../styles/global.css?url";
 
@@ -56,7 +52,7 @@ export const Route = createRootRoute({
 				rel: "preconnect",
 			},
 			{
-				href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap",
+				href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Mono:wght@400;500&display=swap",
 				rel: "stylesheet",
 			},
 			{
@@ -95,13 +91,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="max-w-8xl selection:text-primary relative mx-auto flex min-h-screen flex-col selection:bg-[#c8ff65]">
-				<ThemeProvider>
-					<Header />
-					<div className="flex-1">{children}</div>
-					<Toaster closeButton richColors />
-					<Footer />
-				</ThemeProvider>
+			<body className="bg-paper text-ink min-h-dvh font-sans">
+				{children}
 				<TanStackDevtools
 					config={{
 						position: "bottom-right",
