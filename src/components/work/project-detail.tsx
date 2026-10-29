@@ -12,6 +12,7 @@ import type React from "react";
 import { useEffect, useId, useRef } from "react";
 import type { Project } from "@/types";
 import { hostOf, inkFor, pad } from "./palette";
+import { Shot } from "./shot";
 
 export type Point = { x: number; y: number };
 export type ExitInfo = { mode: "close" | "replace"; point: Point };
@@ -353,16 +354,12 @@ function TiltedPrint({ project }: { project: Project }) {
 			onPointerMove={onPointerMove}
 			style={{ transform }}
 		>
-			<img
+			<Shot
 				alt={`${project.name} screenshot`}
 				className="h-auto w-full"
-				height={600}
-				src={
-					project.image_url.startsWith("/")
-						? project.image_url
-						: `/${project.image_url}`
-				}
-				width={800}
+				eager
+				project={project}
+				sizes="(min-width: 768px) 45vw, 90vw"
 			/>
 		</motion.div>
 	);

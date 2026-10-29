@@ -42,3 +42,6 @@ export const shadesOf = (hex: string) => {
 		medium: hex,
 	};
 };
+
+/** Widths Vercel may resize screenshots to; vite.config.ts allows exactly these. */
+export const SHOT_WIDTHS = [640, 750, 828, 1080, 1280, 1668, 1920];

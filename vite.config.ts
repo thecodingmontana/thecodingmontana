@@ -5,11 +5,25 @@ import viteReact from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
 import viteTsConfigPaths from "vite-tsconfig-paths";
+import { SHOT_WIDTHS } from "./src/components/work/palette";
 
 const config = defineConfig({
 	plugins: [
 		devtools(),
-		nitro(),
+		nitro({
+			vercel: {
+				config: {
+					// enables /_vercel/image, which unpic uses for project screenshots
+					images: {
+						domains: [],
+						formats: ["image/avif", "image/webp"],
+						minimumCacheTTL: 2_592_000,
+						sizes: SHOT_WIDTHS,
+					},
+					version: 3,
+				},
+			},
+		}),
 		// this is the plugin that enables path aliases
 		viteTsConfigPaths({
 			projects: ["./tsconfig.json"],

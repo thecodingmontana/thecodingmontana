@@ -8,6 +8,7 @@ import {
 import type React from "react";
 import type { Project } from "@/types";
 import { liftFor, pad, shadesOf, slugify, tiltFor, wrap } from "./palette";
+import { Shot } from "./shot";
 import type { RibbonMetrics } from "./use-ribbon";
 
 const ENTRANCE_DELAY_S = 0.55;
@@ -82,9 +83,12 @@ export function PosterCard({
 					<div className="border-ink/15 bg-ink/5 rounded-[22px] border p-1.5 shadow-[0_24px_40px_-24px_rgba(23,21,18,0.55)] transition-transform duration-300 ease-(--ease-out) group-hover:-translate-y-2">
 						<div
 							className="relative flex aspect-[16/10] flex-col overflow-hidden rounded-[16px]"
-							style={{
-								background: `linear-gradient(188.62deg, ${shade.dark} 49.9%, ${shade.medium} 81.7%, ${shade.light} 93.88%, ${shade.lighter} 113.5%)`,
-							}}
+							style={
+								{
+									"--glow": project.color,
+									background: `linear-gradient(188.62deg, ${shade.dark} 49.9%, ${shade.medium} 81.7%, ${shade.light} 93.88%, ${shade.lighter} 113.5%)`,
+								} as React.CSSProperties
+							}
 						>
 							<div
 								className="flex items-start justify-between gap-4 px-[7%] pt-[6%]"
@@ -100,19 +104,11 @@ export function PosterCard({
 									→
 								</span>
 							</div>
-							<img
-								alt=""
-								className="mx-auto mt-auto w-[85%] translate-y-[6%] rounded-t-md border border-white/20 transition-[rotate,scale] duration-300 ease-(--ease-out) select-none group-hover:scale-[1.06] group-hover:-rotate-2"
-								draggable={false}
-								height={500}
-								loading={index < 6 ? "eager" : "lazy"}
-								src={
-									project.image_url.startsWith("/")
-										? project.image_url
-										: `/${project.image_url}`
-								}
-								style={{ boxShadow: `0 0 30px ${project.color}` }}
-								width={800}
+							<Shot
+								className="mx-auto mt-auto w-[85%] translate-y-[6%] rounded-t-md border border-white/20 shadow-[0_0_30px_var(--glow)] transition-[rotate,scale] duration-300 ease-(--ease-out) select-none group-hover:scale-[1.06] group-hover:-rotate-2"
+								eager={index < 6}
+								project={project}
+								sizes="(min-width: 768px) 32vw, 74vw"
 							/>
 						</div>
 					</div>
