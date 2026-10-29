@@ -10,3 +10,7 @@ pre-commit:
         - "*.jsonc"
         - "*.css"
       stage_fixed: true
+
+commit-msg:
+  jobs:
+    - run: pnpm exec commitlint --edit {1}
