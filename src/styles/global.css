@@ -3,19 +3,10 @@
 @import "@fontsource/dm-mono/latin-400.css";
 @import "@fontsource/dm-mono/latin-500.css";
 
-@font-face {
-	font-family: "Nyght";
-	src: url("/fonts/NyghtSerif-MediumItalic.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
 @theme {
 	--font-sans:
 		"Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
 	--font-mono: "DM Mono", ui-monospace, monospace;
-	--font-nyght: "Nyght", serif;
 
 	/* risograph paper and inks */
 	--color-paper: #ece5d5;
