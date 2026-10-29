@@ -1,3 +1,6 @@
+// shortcut: the custom domain does not resolve yet, swap this once it does
+export const SITE_URL = "https://thecodingmontana.vercel.app";
+
 export const seo = ({
 	title,
 	description,
@@ -85,8 +88,8 @@ export const seo = ({
 
 		// Additional SEO meta tags
 		{ content: "telephone=no", name: "format-detection" },
-		{ content: "#ffffff", name: "theme-color" },
-		{ content: "light dark", name: "color-scheme" },
+		{ content: "#ece5d5", name: "theme-color" },
+		{ content: "light", name: "color-scheme" },
 	];
 
 	return tags;

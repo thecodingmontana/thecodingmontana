@@ -2,8 +2,27 @@ import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import NotFound from "@/components/not-found";
-import { seo } from "@/lib/seo";
+import { SITE_URL, seo } from "@/lib/seo";
 import appCss from "../styles/global.css?url";
+
+const PERSON_SCHEMA = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	address: {
+		"@type": "PostalAddress",
+		addressCountry: "KE",
+		addressLocality: "Nairobi",
+	},
+	image: `${SITE_URL}/images/og-image.png`,
+	jobTitle: "Software Engineer",
+	name: "Christopher Odhiambo",
+	sameAs: [
+		"https://github.com/thecodingmontana",
+		"https://x.com/codewithmontana",
+		"https://www.linkedin.com/in/christopher-odhiambo-9a8b82369",
+	],
+	url: `${SITE_URL}/`,
+};
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -13,7 +32,7 @@ export const Route = createRootRoute({
 				rel: "stylesheet",
 			},
 			{
-				href: "https://thecodingmontana.com",
+				href: `${SITE_URL}/`,
 				rel: "canonical",
 			},
 			{
@@ -39,7 +58,7 @@ export const Route = createRootRoute({
 				sizes: "180x180",
 			},
 			{
-				href: "/site.webmanifest",
+				href: "/manifest.json",
 				rel: "manifest",
 			},
 			{
@@ -71,14 +90,20 @@ export const Route = createRootRoute({
 			...seo({
 				author: "Christopher Odhiambo",
 				description:
-					"Hello, I'm Christopher Odhiambo, Software Engineer. I focus on crafting beautiful experiences on both web and mobile that are easy to use, enjoyable, and get the job done.",
-				image: "https://thecodingmontana.com/images/og-image.png",
+					"Christopher Odhiambo is a software engineer in Nairobi building web and mobile products with React, Vue, Nuxt and TypeScript. See 16 shipped projects.",
+				image: `${SITE_URL}/images/og-image.png`,
 				keywords:
 					"Christopher Odhiambo, Software Engineer, Full Stack Developer, Web Developer, Mobile Developer, React Developer, TypeScript Developer, Frontend Engineer, Backend Engineer, UI/UX Developer, JavaScript Developer, Nairobi Software Engineer, Kenya Web Developer, TanStack Developer, React Native Developer, Modern Web Applications, Software Development Portfolio, Freelance Software Engineer, Custom Software Development, Web App Development, Mobile App Development",
-				title: "Christopher Odhiambo - Software Engineer",
+				title: "Christopher Odhiambo | Software Engineer in Nairobi",
 				twitterHandle: "@codewithmontana",
-				url: "https://thecodingmontana.com",
+				url: `${SITE_URL}/`,
 			}),
+		],
+		scripts: [
+			{
+				children: JSON.stringify(PERSON_SCHEMA),
+				type: "application/ld+json",
+			},
 		],
 	}),
 	notFoundComponent: NotFound,
