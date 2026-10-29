@@ -12,7 +12,14 @@ const isTest = Boolean(process.env.VITEST);
 
 const config = defineConfig({
 	plugins: [
+		// devtools must stay first; nitro goes after tanstackStart
 		!isTest && devtools(),
+		// this is the plugin that enables path aliases
+		viteTsConfigPaths({
+			projects: ["./tsconfig.json"],
+		}),
+		!isTest && tailwindcss(),
+		!isTest && tanstackStart(),
 		!isTest &&
 			nitro({
 				vercel: {
@@ -28,12 +35,6 @@ const config = defineConfig({
 					},
 				},
 			}),
-		// this is the plugin that enables path aliases
-		viteTsConfigPaths({
-			projects: ["./tsconfig.json"],
-		}),
-		!isTest && tailwindcss(),
-		!isTest && tanstackStart(),
 		!isTest && viteReact(),
 	],
 });
