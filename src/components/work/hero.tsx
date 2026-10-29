@@ -25,7 +25,7 @@ export function Hero({ count, activeIndex, activeName }: Props) {
 					thecodingmontana
 					<span className="bg-ember size-2 rounded-full" />
 				</span>
-				<p aria-live="polite" className="flex items-baseline gap-2 text-right">
+				<p className="flex items-baseline gap-2 text-right">
 					<span className="text-ember-deep">
 						{pad(activeIndex + 1)}/{pad(count)}
 					</span>
