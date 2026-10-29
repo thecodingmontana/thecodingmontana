@@ -79,14 +79,10 @@ export const Route = createRootRoute({
 				name: "viewport",
 			},
 			...seo({
-				author: "Christopher Odhiambo",
 				description:
 					"Christopher Odhiambo is a software engineer in Nairobi building web and mobile products with React, Vue, Nuxt and TypeScript. See 16 shipped projects.",
 				image: `${SITE_URL}/images/og-image.png`,
-				keywords:
-					"Christopher Odhiambo, Software Engineer, Full Stack Developer, Web Developer, Mobile Developer, React Developer, TypeScript Developer, Frontend Engineer, Backend Engineer, UI/UX Developer, JavaScript Developer, Nairobi Software Engineer, Kenya Web Developer, TanStack Developer, React Native Developer, Modern Web Applications, Software Development Portfolio, Freelance Software Engineer, Custom Software Development, Web App Development, Mobile App Development",
 				title: "Christopher Odhiambo | Software Engineer in Nairobi",
-				twitterHandle: "@codewithmontana",
 				url: `${SITE_URL}/`,
 			}),
 		],
