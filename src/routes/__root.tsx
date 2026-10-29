@@ -1,3 +1,4 @@
+import headlineFont from "@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-opsz-normal.woff2?url";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
@@ -62,21 +63,11 @@ export const Route = createRootRoute({
 				rel: "manifest",
 			},
 			{
-				href: "https://fonts.googleapis.com",
-				rel: "preconnect",
-			},
-			{
+				as: "font",
 				crossOrigin: "anonymous",
-				href: "https://fonts.gstatic.com",
-				rel: "preconnect",
-			},
-			{
-				href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Mono:wght@400;500&display=swap",
-				rel: "stylesheet",
-			},
-			{
-				href: "https://fonts.googleapis.com",
-				rel: "dns-prefetch",
+				href: headlineFont,
+				rel: "preload",
+				type: "font/woff2",
 			},
 		],
 		meta: [

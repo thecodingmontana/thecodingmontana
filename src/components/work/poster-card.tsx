@@ -117,12 +117,12 @@ export function PosterCard({
 						className="mt-4 flex items-baseline gap-3 pr-2"
 						style={{ opacity: captionOpacity }}
 					>
-						<span className="text-ember font-mono text-[11px] tracking-wide">
+						<span className="text-ember-deep font-mono text-[11px] tracking-wide">
 							{pad(index + 1)}
 						</span>
-						<h3 className="text-[clamp(1.15rem,1.4vw,1.4rem)] leading-tight font-bold tracking-[-0.02em]">
+						<h2 className="text-[clamp(1.15rem,1.4vw,1.4rem)] leading-tight font-bold tracking-[-0.02em]">
 							{project.name}
-						</h3>
+						</h2>
 					</motion.div>
 				</Link>
 			</motion.div>

@@ -21,17 +21,12 @@ export function Hero({ count, activeIndex, activeName }: Props) {
 	return (
 		<header className="grid gap-y-8 md:grid-cols-[auto_minmax(0,24rem)_1fr] md:gap-x-[5vw]">
 			<div className="flex items-center justify-between font-mono text-[11px] tracking-[0.14em] uppercase md:col-span-3">
-				<motion.span
-					animate={{ opacity: 1 }}
-					className="flex items-center gap-1.5 font-sans text-[15px] font-extrabold tracking-[-0.02em] normal-case"
-					initial={{ opacity: 0 }}
-					transition={{ duration: 0.6, ease: EASE_OUT }}
-				>
+				<span className="enter-fade flex items-center gap-1.5 font-sans text-[15px] font-extrabold tracking-[-0.02em] normal-case">
 					thecodingmontana
 					<span className="bg-ember size-2 rounded-full" />
-				</motion.span>
+				</span>
 				<p aria-live="polite" className="flex items-baseline gap-2 text-right">
-					<span className="text-ember">
+					<span className="text-ember-deep">
 						{pad(activeIndex + 1)}/{pad(count)}
 					</span>
 					<motion.span
@@ -60,18 +55,12 @@ export function Hero({ count, activeIndex, activeName }: Props) {
 								<Fragment key={word.text}>
 									{index > 0 ? " " : null}
 									<span className="-mb-[0.12em] inline-block overflow-hidden pb-[0.12em] align-bottom">
-										<motion.span
-											animate={{ opacity: 1, transform: "translateY(0%)" }}
-											className={`inline-block ${word.accent ? "text-ember" : ""}`}
-											initial={
-												reduce
-													? { opacity: 0 }
-													: { opacity: 1, transform: "translateY(105%)" }
-											}
-											transition={{ delay, duration: 0.9, ease: EASE_OUT }}
+										<span
+											className={`enter-rise inline-block ${word.accent ? "text-ember" : ""}`}
+											style={{ animationDelay: `${delay}s` }}
 										>
 											{word.text}
-										</motion.span>
+										</span>
 									</span>
 								</Fragment>
 							);
@@ -80,14 +69,9 @@ export function Hero({ count, activeIndex, activeName }: Props) {
 				))}
 			</h1>
 
-			<motion.div
-				animate={{ opacity: 1, transform: "translateY(0px)" }}
-				className="flex max-w-sm flex-col gap-5 self-end md:pb-2"
-				initial={{
-					opacity: 0,
-					transform: reduce ? "none" : "translateY(16px)",
-				}}
-				transition={{ delay: 0.75, duration: 0.8, ease: EASE_OUT }}
+			<div
+				className="enter-lift flex max-w-sm flex-col gap-5 self-end md:pb-2"
+				style={{ animationDelay: "0.45s" }}
 			>
 				<p className="text-ink/75 text-[15px] leading-relaxed">
 					I'm Christopher Odhiambo, a software engineer in Nairobi shipping
@@ -106,7 +90,7 @@ export function Hero({ count, activeIndex, activeName }: Props) {
 							↗
 						</span>
 					</a>
-					<span className="text-ink/60 flex items-center gap-3 font-mono text-[11px] tracking-[0.14em] uppercase">
+					<span className="text-ink/70 flex items-center gap-3 font-mono text-[11px] tracking-[0.14em] uppercase">
 						Scroll to move through work
 						<motion.span
 							animate={
@@ -132,7 +116,7 @@ export function Hero({ count, activeIndex, activeName }: Props) {
 						</motion.span>
 					</span>
 				</div>
-			</motion.div>
+			</div>
 		</header>
 	);
 }

@@ -43,8 +43,8 @@ export function Timeline({ projects, ribbon }: Props) {
 						>
 							<button
 								aria-current={isActive ? "true" : undefined}
-								aria-label={`Go to ${project.name}`}
-								className="group flex cursor-pointer flex-col items-center px-1.5 outline-none"
+								aria-label={`${pad(index + 1)} ${project.name}`}
+								className="group flex min-h-6 min-w-6 cursor-pointer flex-col items-center px-1.5 outline-none"
 								onClick={() => goTo(index)}
 								type="button"
 							>
@@ -52,7 +52,7 @@ export function Timeline({ projects, ribbon }: Props) {
 									className={`block h-1.5 w-px transition-colors duration-200 ${isActive ? "bg-ember" : "bg-ink/40"}`}
 								/>
 								<span
-									className={`group-focus-visible:text-ink mt-1.5 font-mono text-[10px] tracking-wide transition-colors duration-200 ${isActive ? "text-ember" : "text-ink/45"} ${showLabel ? "" : "hidden md:block"}`}
+									className={`group-focus-visible:text-ink mt-1.5 font-mono text-[10px] tracking-wide transition-colors duration-200 ${isActive ? "text-ember-deep" : "text-ink/65"} ${showLabel ? "" : "hidden md:block"}`}
 								>
 									{pad(index + 1)}
 								</span>

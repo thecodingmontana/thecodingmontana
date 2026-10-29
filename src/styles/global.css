@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "@fontsource-variable/bricolage-grotesque/opsz.css";
+@import "@fontsource/dm-mono/latin-400.css";
+@import "@fontsource/dm-mono/latin-500.css";
 
 @font-face {
 	font-family: "Nyght";
@@ -9,7 +12,8 @@
 }
 
 @theme {
-	--font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+	--font-sans:
+		"Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
 	--font-mono: "DM Mono", ui-monospace, monospace;
 	--font-nyght: "Nyght", serif;
 
@@ -17,6 +21,8 @@
 	--color-paper: #ece5d5;
 	--color-ink: #171512;
 	--color-ember: #ff4c24;
+	/* ember darkened to 4.78:1 on paper for small text */
+	--color-ember-deep: #b8320c;
 
 	--ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 	--ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
@@ -59,5 +65,44 @@ html {
 @media (prefers-reduced-motion: reduce) {
 	.caret {
 		animation: none;
+	}
+}
+
+/* hero entrance runs in CSS so it starts at first paint, not after hydration */
+@keyframes rise {
+	from {
+		transform: translateY(105%);
+	}
+}
+
+@keyframes lift-in {
+	from {
+		opacity: 0;
+		transform: translateY(16px);
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+.enter-rise {
+	animation: rise 0.9s var(--ease-out) both;
+}
+
+.enter-lift {
+	animation: lift-in 0.8s var(--ease-out) both;
+}
+
+.enter-fade {
+	animation: fade-in 0.6s var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.enter-rise,
+	.enter-lift {
+		animation-name: fade-in;
 	}
 }

@@ -10,7 +10,7 @@ const LINKS = [
 
 export function Colophon() {
 	return (
-		<footer className="text-ink/60 flex flex-col gap-3 font-mono text-[10.5px] tracking-[0.12em] uppercase md:flex-row md:items-center md:justify-between">
+		<footer className="text-ink/70 flex flex-col gap-3 font-mono text-[10.5px] tracking-[0.12em] uppercase md:flex-row md:items-center md:justify-between">
 			<p>
 				Web &amp; mobile · TypeScript, React, Vue, Nuxt · ©{" "}
 				{new Date().getFullYear()}
