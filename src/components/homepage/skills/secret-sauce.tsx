@@ -12,24 +12,24 @@ export default function SecretSauce() {
 				<div className="mask-[linear-gradient(to_top,transparent,black_50%,black_90%,transparent)]">
 					<AnimatePresence>
 						<motion.div
-							animate={{ rotate: [0, 360], opacity: 1 }}
+							animate={{ opacity: 1, rotate: [0, 360] }}
 							className="relative mx-auto size-75 translate-y-36 md:size-95 md:translate-y-40"
-							exit={{ rotate: 180, opacity: 0 }}
-							initial={{ rotate: 0, opacity: 0 }}
+							exit={{ opacity: 0, rotate: 180 }}
+							initial={{ opacity: 0, rotate: 0 }}
 							transition={{
+								opacity: {
+									duration: 0.5,
+								},
 								rotate: {
 									duration: 8,
 									ease: "linear",
 									repeat: Number.POSITIVE_INFINITY,
 								},
-								opacity: {
-									duration: 0.5,
-								},
 							}}
 						>
 							<img
 								alt="skills cover rotating"
-								className="z-10 w-full select-none opacity-65"
+								className="z-10 w-full opacity-65 select-none"
 								draggable={false}
 								height={512}
 								src="/images/steel-flower.webp"
@@ -41,19 +41,19 @@ export default function SecretSauce() {
 			</div>
 
 			<h2
-				className="relative z-30 mb-0 size-full -translate-y-6 text-balance text-center font-medium text-4xl tracking-tight sm:text-5xl md:-translate-y-10 md:text-6xl"
+				className="relative z-30 mb-0 size-full -translate-y-6 text-center text-4xl font-medium tracking-tight text-balance sm:text-5xl md:-translate-y-10 md:text-6xl"
 				style={{
 					textShadow:
 						"0px 4px 8px rgba(255,255,255,0.05), 0px 8px 30px rgba(255,255,255,0.25)",
 				}}
 			>
-				<p className="mb-3 font-normal text-xs uppercase tracking-widest md:text-sm dark:text-white/70">
+				<p className="mb-3 text-xs font-normal tracking-widest uppercase md:text-sm dark:text-white/70">
 					My Skills
 				</p>
 
 				<span>
 					<span>The Secret </span>
-					<span className="animate-gradient-x bg-[linear-gradient(288deg,#ff8000,#f0c_53.2394%,#04f)] bg-clip-text font-nyght text-transparent tracking-wide">
+					<span className="animate-gradient-x font-nyght bg-[linear-gradient(288deg,#ff8000,#f0c_53.2394%,#04f)] bg-clip-text tracking-wide text-transparent">
 						Sauce
 					</span>
 				</span>

@@ -9,17 +9,17 @@ export default function Footer() {
 			<motion.footer
 				className="mx-auto mt-28 w-full max-w-full px-5 py-10 md:max-w-4xl lg:max-w-6xl"
 				exit={{ opacity: 0 }}
-				initial={{ y: 40, opacity: 0 }}
-				transition={{ type: "spring", bounce: 0.4, delay: 0.3 }}
+				initial={{ opacity: 0, y: 40 }}
+				transition={{ bounce: 0.4, delay: 0.3, type: "spring" }}
 				viewport={{ amount: 0.8 }}
-				whileInView={{ y: 0, opacity: 1 }}
+				whileInView={{ opacity: 1, y: 0 }}
 			>
 				<div className="flex w-full flex-col justify-start">
 					<div className="flex w-full flex-col items-center gap-y-4 md:flex-row md:justify-between">
 						<div className="flex flex-col gap-y-4 md:self-start">
 							<h3 className="text-5xl">
 								Feeling{" "}
-								<span className="animate-gradient-x bg-[linear-gradient(288deg,#ff8000,#f0c_53.2394%,#04f)] bg-clip-text font-nyght text-transparent tracking-wide">
+								<span className="animate-gradient-x font-nyght bg-[linear-gradient(288deg,#ff8000,#f0c_53.2394%,#04f)] bg-clip-text tracking-wide text-transparent">
 									Inspired
 								</span>
 							</h3>
@@ -36,7 +36,7 @@ export default function Footer() {
 								</a>
 
 								<Button
-									className="-ml-1 cursor-pointer rounded-full bg-[#c8ff65] text-black transition-all duration-500 ease-in-out hover:bg-[#c8ff65] group-hover:translate-x-3"
+									className="-ml-1 cursor-pointer rounded-full bg-[#c8ff65] text-black transition-all duration-500 ease-in-out group-hover:translate-x-3 hover:bg-[#c8ff65]"
 									size="icon"
 								>
 									<Icon
@@ -48,7 +48,7 @@ export default function Footer() {
 						</div>
 
 						<div className="grid gap-2 text-center md:self-start md:text-start">
-							<h4 className="font-semibold text-lg">Contact Info</h4>
+							<h4 className="text-lg font-semibold">Contact Info</h4>
 
 							<div className="flex flex-col items-center space-y-1 md:items-start">
 								<a

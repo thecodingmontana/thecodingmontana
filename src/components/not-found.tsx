@@ -11,23 +11,23 @@ export default function NotFound() {
 			<div className="mx-auto max-w-2xl space-y-8 text-center">
 				{/* Glitchy 404 Text */}
 				<div className="relative">
-					<h1 className="glitch-text select-none font-black text-9xl text-transparent md:text-[12rem]">
+					<h1 className="glitch-text text-9xl font-black text-transparent select-none md:text-[12rem]">
 						404
 					</h1>
-					<h1 className="glitch-text-shadow absolute inset-0 select-none font-black text-9xl text-slate-100 md:text-[12rem]">
+					<h1 className="glitch-text-shadow absolute inset-0 text-9xl font-black text-slate-100 select-none md:text-[12rem]">
 						404
 					</h1>
-					<h1 className="glitch-text-shadow-2 absolute inset-0 select-none font-black text-9xl text-brand md:text-[12rem]">
+					<h1 className="glitch-text-shadow-2 text-brand absolute inset-0 text-9xl font-black select-none md:text-[12rem]">
 						404
 					</h1>
 				</div>
 
 				{/* Glitchy Message */}
 				<div className="space-y-4">
-					<p className="glitch-message font-extralight text-xl md:text-2xl">
+					<p className="glitch-message text-xl font-extralight md:text-2xl">
 						This page fell into the void.
 					</p>
-					<p className="glitch-subtitle font-extralight text-red-600 text-sm md:text-base">
+					<p className="glitch-subtitle text-sm font-extralight text-red-600 md:text-base">
 						{"// ERROR: Reality.exe has stopped working"}
 					</p>
 				</div>
@@ -36,7 +36,7 @@ export default function NotFound() {
 				<div className="pt-4">
 					<Button
 						asChild
-						className="bg-brand text-white hover:bg-brand-secondary"
+						className="bg-brand hover:bg-brand-secondary text-white"
 						size="lg"
 					>
 						<Link className="flex items-center gap-2" to="/">

@@ -7,7 +7,7 @@ export default function Hero() {
 			<div className="relative z-20 mx-auto mt-36 mb-2 flex max-w-full flex-col items-center justify-center px-3 md:mt-48 md:max-w-4xl lg:max-w-5xl">
 				<motion.h1
 					animate={{ opacity: 1, y: 0 }}
-					className="my-2 w-full text-balance py-px text-center font-semibold text-4xl leading-snug opacity-90 md:text-5xl lg:text-6xl dark:text-zinc-100"
+					className="my-2 w-full py-px text-center text-4xl leading-snug font-semibold text-balance opacity-90 md:text-5xl lg:text-6xl dark:text-zinc-100"
 					initial={{ opacity: 0, y: 20 }}
 					transition={{ delay: 0.5, duration: 1.8 }}
 				>
@@ -18,7 +18,7 @@ export default function Hero() {
 					experiences on{" "}
 					<motion.span
 						animate={{ opacity: 1 }}
-						className="animate-gradient-x bg-[linear-gradient(288deg,#ff8000,#f0c_53.2394%,#04f)] bg-clip-text font-nyght text-transparent tracking-wide"
+						className="animate-gradient-x font-nyght bg-[linear-gradient(288deg,#ff8000,#f0c_53.2394%,#04f)] bg-clip-text tracking-wide text-transparent"
 						initial={{ opacity: 0 }}
 						transition={{ delay: 0.8, duration: 1.5 }}
 					>
@@ -29,7 +29,7 @@ export default function Hero() {
 
 				<motion.p
 					animate={{ opacity: 1, y: 0 }}
-					className="relative z-10 mt-4 mb-7 flex max-w-xl flex-col items-center justify-center text-center text-muted-foreground sm:flex-row md:text-xl lg:mt-7 dark:text-white"
+					className="text-muted-foreground relative z-10 mt-4 mb-7 flex max-w-xl flex-col items-center justify-center text-center sm:flex-row md:text-xl lg:mt-7 dark:text-white"
 					initial={{ opacity: 0, y: 20 }}
 					transition={{ delay: 1.2, duration: 1.5 }}
 				>
@@ -47,12 +47,12 @@ export default function Hero() {
 					transition={{ delay: 1.5, duration: 1.5 }}
 				>
 					<a
-						className="group relative inline-flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-white/10 bg-[#c8ff65] pr-0.75 pl-2 font-medium text-base opacity-85 backdrop-blur-xs transition-all hover:bg-transparent md:py-1 md:pr-1 md:pl-3 dark:bg-white/10"
+						className="group relative inline-flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-white/10 bg-[#c8ff65] pr-0.75 pl-2 text-base font-medium opacity-85 backdrop-blur-xs transition-all hover:bg-transparent md:py-1 md:pr-1 md:pl-3 dark:bg-white/10"
 						href="https://cal.com/thecodingmontana"
 						rel="noreferrer noopener"
 						target="_blank"
 					>
-						<span className="z-10 px-3 text-primary transition-colors duration-300 group-hover:text-black dark:text-white dark:hover:text-black">
+						<span className="text-primary z-10 px-3 transition-colors duration-300 group-hover:text-black dark:text-white dark:hover:text-black">
 							Book a call
 						</span>
 						<span className="absolute inset-0 translate-x-[45%] scale-0 rounded-full bg-white opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:scale-100 group-hover:opacity-100" />

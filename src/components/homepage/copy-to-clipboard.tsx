@@ -23,9 +23,9 @@ export default function CopyToClipboard({ text }: Props) {
 	};
 	return (
 		<button
-			className="flex cursor-pointer items-center gap-2 py-3 font-light text-base text-primary outline-hidden transition-all duration-300 hover:text-muted-foreground dark:text-white/75 dark:hover:text-white/90"
+			className="text-primary hover:text-muted-foreground flex cursor-pointer items-center gap-2 py-3 text-base font-light outline-hidden transition-all duration-300 dark:text-white/75 dark:hover:text-white/90"
 			disabled={isCopied}
-			onClick={() => copyToClipboard()}
+			onClick={copyToClipboard}
 			type="button"
 		>
 			{isCopied ? (

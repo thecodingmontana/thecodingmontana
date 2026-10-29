@@ -9,7 +9,7 @@ export default function CuratedWork() {
 			<AnimatePresence>
 				<motion.h2
 					animate={{ opacity: 1, y: 0 }}
-					className="relative z-2 mb-20 text-balance text-center font-medium text-4xl tracking-tight sm:text-5xl md:mb-36 md:text-6xl"
+					className="relative z-2 mb-20 text-center text-4xl font-medium tracking-tight text-balance sm:text-5xl md:mb-36 md:text-6xl"
 					exit={{ opacity: 0 }}
 					initial={{ opacity: 0, y: 20 }}
 					style={{
@@ -23,12 +23,12 @@ export default function CuratedWork() {
 						type: "spring",
 					}}
 				>
-					<p className="mb-3 font-normal text-muted-foreground text-xs uppercase tracking-widest md:text-sm dark:text-white/70">
+					<p className="text-muted-foreground mb-3 text-xs font-normal tracking-widest uppercase md:text-sm dark:text-white/70">
 						FEATURED CASE STUDIES
 					</p>
 					<span>
 						<span>Curated</span>
-						<span className="ml-1 animate-gradient-x bg-[linear-gradient(288deg,#ff8000,#f0c_53.2394%,#04f)] bg-clip-text font-nyght text-transparent tracking-wide">
+						<span className="animate-gradient-x font-nyght ml-1 bg-[linear-gradient(288deg,#ff8000,#f0c_53.2394%,#04f)] bg-clip-text tracking-wide text-transparent">
 							work
 						</span>
 					</span>

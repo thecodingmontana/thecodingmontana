@@ -143,6 +143,7 @@
 /* Custom scrollbar hiding */
 .scrollbar-hide {
 	-ms-overflow-style: none;
+	/* biome-ignore lint/suspicious/useBaseline: -webkit-scrollbar rule below covers older browsers */
 	scrollbar-width: none;
 }
 

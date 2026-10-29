@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/nursery/noLeakedRender: ignore-all */
+/** biome-ignore-all lint/suspicious/noLeakedRender: ignore-all */
 import { Icon } from "@iconify/react";
 import { motion, useInView, type Variants } from "motion/react";
 import { useRef } from "react";
@@ -16,8 +16,8 @@ export default function WorkLink({ github, website }: Props) {
 		hidden: {},
 		visible: {
 			transition: {
-				staggerChildren: 0.1,
 				delayChildren: 0.15,
+				staggerChildren: 0.1,
 			},
 		},
 	};
@@ -25,17 +25,17 @@ export default function WorkLink({ github, website }: Props) {
 	const itemVariants: Variants = {
 		hidden: {
 			opacity: 0,
-			y: 20,
 			scale: 0.9,
+			y: 20,
 		},
 		visible: {
 			opacity: 1,
-			y: 0,
 			scale: 1,
 			transition: {
 				duration: 0.45,
 				ease: "easeOut",
 			},
+			y: 0,
 		},
 	};
 

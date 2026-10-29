@@ -16,7 +16,7 @@ export default function WorkInfo({ project }: Props) {
 			<motion.div
 				className="sticky top-40"
 				initial={{ opacity: 0, y: 10 }}
-				transition={{ type: "spring", bounce: 0.2 }}
+				transition={{ bounce: 0.2, type: "spring" }}
 				viewport={{ amount: 0.5 }}
 				whileInView={{ opacity: 1, y: 0 }}
 			>
@@ -30,16 +30,16 @@ export default function WorkInfo({ project }: Props) {
 					/>
 					<div className="flex flex-col items-start lg:h-125">
 						<div className="flex items-center gap-3">
-							<h3 className="font-bold text-2xl text-foreground">
+							<h3 className="text-foreground text-2xl font-bold">
 								{project.name}
 							</h3>
 						</div>
-						<p className="my-2 font-light text-base text-muted-foreground">
+						<p className="text-muted-foreground my-2 text-base font-light">
 							{project.description}
 						</p>
 						{project.highlights.map((highlight, index) => (
 							<ul
-								className="mt-4 flex flex-col gap-y-2 text-accent-foreground/85 text-base"
+								className="text-accent-foreground/85 mt-4 flex flex-col gap-y-2 text-base"
 								key={index}
 							>
 								<li className="flex items-center text-sm">

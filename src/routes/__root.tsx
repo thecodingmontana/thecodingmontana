@@ -11,82 +11,82 @@ import appCss from "../styles/global.css?url";
 
 export const Route = createRootRoute({
 	head: () => ({
+		links: [
+			{
+				href: appCss,
+				rel: "stylesheet",
+			},
+			{
+				href: "https://thecodingmontana.com",
+				rel: "canonical",
+			},
+			{
+				href: "/favicon.ico",
+				rel: "icon",
+				type: "image/x-icon",
+			},
+			{
+				href: "/favicon-32x32.png",
+				rel: "icon",
+				sizes: "32x32",
+				type: "image/png",
+			},
+			{
+				href: "/favicon-16x16.png",
+				rel: "icon",
+				sizes: "16x16",
+				type: "image/png",
+			},
+			{
+				href: "/apple-touch-icon.png",
+				rel: "apple-touch-icon",
+				sizes: "180x180",
+			},
+			{
+				href: "/site.webmanifest",
+				rel: "manifest",
+			},
+			{
+				href: "https://fonts.googleapis.com",
+				rel: "preconnect",
+			},
+			{
+				crossOrigin: "anonymous",
+				href: "https://fonts.gstatic.com",
+				rel: "preconnect",
+			},
+			{
+				href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap",
+				rel: "stylesheet",
+			},
+			{
+				href: "https://fonts.googleapis.com",
+				rel: "dns-prefetch",
+			},
+		],
 		meta: [
 			{
 				charSet: "utf-8",
 			},
 			{
-				name: "viewport",
 				content: "width=device-width, initial-scale=1, viewport-fit=cover",
+				name: "viewport",
 			},
 			...seo({
-				title: "Christopher Odhiambo - Software Engineer",
+				author: "Christopher Odhiambo",
 				description:
 					"Hello, I'm Christopher Odhiambo, Software Engineer. I focus on crafting beautiful experiences on both web and mobile that are easy to use, enjoyable, and get the job done.",
+				image: "https://thecodingmontana.com/images/og-image.png",
 				keywords:
 					"Christopher Odhiambo, Software Engineer, Full Stack Developer, Web Developer, Mobile Developer, React Developer, TypeScript Developer, Frontend Engineer, Backend Engineer, UI/UX Developer, JavaScript Developer, Nairobi Software Engineer, Kenya Web Developer, TanStack Developer, React Native Developer, Modern Web Applications, Software Development Portfolio, Freelance Software Engineer, Custom Software Development, Web App Development, Mobile App Development",
-				author: "Christopher Odhiambo",
+				title: "Christopher Odhiambo - Software Engineer",
 				twitterHandle: "@codewithmontana",
 				url: "https://thecodingmontana.com",
-				image: "https://thecodingmontana.com/images/og-image.png",
 			}),
 		],
-		links: [
-			{
-				rel: "stylesheet",
-				href: appCss,
-			},
-			{
-				rel: "canonical",
-				href: "https://thecodingmontana.com",
-			},
-			{
-				rel: "icon",
-				type: "image/x-icon",
-				href: "/favicon.ico",
-			},
-			{
-				rel: "icon",
-				type: "image/png",
-				sizes: "32x32",
-				href: "/favicon-32x32.png",
-			},
-			{
-				rel: "icon",
-				type: "image/png",
-				sizes: "16x16",
-				href: "/favicon-16x16.png",
-			},
-			{
-				rel: "apple-touch-icon",
-				sizes: "180x180",
-				href: "/apple-touch-icon.png",
-			},
-			{
-				rel: "manifest",
-				href: "/site.webmanifest",
-			},
-			{
-				rel: "preconnect",
-				href: "https://fonts.googleapis.com",
-			},
-			{
-				rel: "preconnect",
-				href: "https://fonts.gstatic.com",
-				crossOrigin: "anonymous",
-			},
-			{
-				rel: "stylesheet",
-				href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap",
-			},
-			{
-				rel: "dns-prefetch",
-				href: "https://fonts.googleapis.com",
-			},
-		],
 	}),
-	shellComponent: RootDocument,
 	notFoundComponent: NotFound,
+	shellComponent: RootDocument,
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
@@ -95,7 +95,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="relative mx-auto flex min-h-screen max-w-8xl flex-col selection:bg-[#c8ff65] selection:text-primary">
+			<body className="max-w-8xl selection:text-primary relative mx-auto flex min-h-screen flex-col selection:bg-[#c8ff65]">
 				<ThemeProvider>
 					<Header />
 					<div className="flex-1">{children}</div>

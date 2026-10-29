@@ -18,8 +18,8 @@ export default function TechStack({ stacks }: Props) {
 		visible: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.1,
 				delayChildren: 0.2,
+				staggerChildren: 0.1,
 			},
 		},
 	};
@@ -27,17 +27,17 @@ export default function TechStack({ stacks }: Props) {
 	const itemVariants: Variants = {
 		hidden: {
 			opacity: 0,
-			y: 20,
 			scale: 0.9,
+			y: 20,
 		},
 		visible: {
 			opacity: 1,
-			y: 0,
 			scale: 1,
 			transition: {
 				duration: 0.5,
 				ease: "easeOut",
 			},
+			y: 0,
 		},
 	};
 
@@ -45,7 +45,7 @@ export default function TechStack({ stacks }: Props) {
 		<div ref={domRef}>
 			<motion.ul
 				animate={isInView ? "visible" : "hidden"}
-				className="mx-auto flex max-w-4xl flex-wrap justify-center gap-2 text-gray-800 text-lg lg:gap-4"
+				className="mx-auto flex max-w-4xl flex-wrap justify-center gap-2 text-lg text-gray-800 lg:gap-4"
 				initial="hidden"
 				variants={containerVariants}
 			>

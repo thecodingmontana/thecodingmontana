@@ -9,15 +9,15 @@ type Props = {
 
 const generateColorVariations = (baseColor: string) => {
 	const hex = baseColor.replace("#", "");
-	const r = Number.parseInt(hex.substring(0, 2), 16);
-	const g = Number.parseInt(hex.substring(2, 4), 16);
-	const b = Number.parseInt(hex.substring(4, 6), 16);
+	const r = Number.parseInt(hex.slice(0, 2), 16);
+	const g = Number.parseInt(hex.slice(2, 4), 16);
+	const b = Number.parseInt(hex.slice(4, 6), 16);
 
 	return {
 		dark: `rgb(${Math.floor(r * 0.3)}, ${Math.floor(g * 0.3)}, ${Math.floor(b * 0.3)})`,
-		medium: baseColor,
 		light: `rgb(${Math.min(255, r + 60)}, ${Math.min(255, g + 60)}, ${Math.min(255, b + 60)})`,
 		lighter: `rgb(${Math.min(255, r + 120)}, ${Math.min(255, g + 120)}, ${Math.min(255, b + 120)})`,
+		medium: baseColor,
 	};
 };
 
@@ -26,9 +26,9 @@ export default function ProjectCard({ project }: Props) {
 		? generateColorVariations(project.color)
 		: {
 				dark: "rgb(107, 13, 51)",
-				medium: "rgb(219, 39, 119)",
 				light: "rgb(244, 114, 182)",
 				lighter: "rgb(249, 215, 147)",
+				medium: "rgb(219, 39, 119)",
 			};
 
 	return (
@@ -36,16 +36,17 @@ export default function ProjectCard({ project }: Props) {
 			<motion.div
 				className="project-card flex w-full flex-row md:col-span-1 lg:col-span-2"
 				exit={{ opacity: 0 }}
-				initial={{ scale: 0.8, y: 10, opacity: 0 }}
-				transition={{ type: "spring", bounce: 0.4 }}
+				initial={{ opacity: 0, scale: 0.8, y: 10 }}
+				transition={{ bounce: 0.4, type: "spring" }}
 				viewport={{ amount: 0.5 }}
-				whileInView={{ scale: 1, y: 0, opacity: 1 }}
+				whileInView={{ opacity: 1, scale: 1, y: 0 }}
 			>
 				<div className="flex flex-col md:mx-10 md:w-full">
 					<a
 						className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl md:h-115 md:rounded-3xl md:p-2 lg:h-140"
 						draggable={false}
 						href={project.website || project.github || "#"}
+						rel="noopener"
 						target="_blank"
 					>
 						<div
@@ -92,7 +93,7 @@ export default function ProjectCard({ project }: Props) {
 
 							<img
 								alt={project.name}
-								className="w-full max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform md:block md:rotate-0 md:group-hover:-rotate-3 md:group-hover:scale-[1.08]"
+								className="w-full max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform md:block md:rotate-0 md:group-hover:scale-[1.08] md:group-hover:-rotate-3"
 								height={753}
 								loading="lazy"
 								src={project.image_url || "/images/vue-twitter.png"}

@@ -23,8 +23,8 @@ type ThemeProviderState = {
 };
 
 const initialState: ThemeProviderState = {
-	theme: "system",
 	setTheme: () => null,
+	theme: "system",
 };
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
@@ -40,9 +40,9 @@ export function ThemeProvider({
 }: ThemeProviderProps) {
 	const [theme, setTheme] = useState<Theme>(
 		() =>
-			(typeof window !== "undefined"
-				? (localStorage.getItem(storageKey) as Theme)
-				: null) || defaultTheme
+			(typeof window === "undefined"
+				? null
+				: (localStorage.getItem(storageKey) as Theme)) || defaultTheme
 	);
 
 	const handleMediaQuery = useCallback(
@@ -92,8 +92,8 @@ export function ThemeProvider({
 
 	const value = useMemo(
 		() => ({
-			theme,
 			setTheme,
+			theme,
 		}),
 		[theme]
 	);
