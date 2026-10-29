@@ -17,31 +17,24 @@ export const projects: Project[] = [
 		name: "Zadaci",
 		stack: [
 			{
-				icon: "logos:nuxt-icon",
 				name: "Nuxt.js",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "devicon:supabase",
 				name: "Supabase",
 			},
 			{
-				icon: "material-icon-theme:drizzle",
 				name: "Drizzle ORM",
 			},
 			{
-				icon: "logos:tailwindcss-icon",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "vscode-icons:file-type-shadcn",
 				name: "Shadcn UI",
 			},
 			{
-				icon: "logos:postgresql",
 				name: "PostgreSQL",
 			},
 		],
@@ -63,23 +56,18 @@ export const projects: Project[] = [
 		name: "Dogdom",
 		stack: [
 			{
-				icon: "simple-icons:expo",
 				name: "Expo",
 			},
 			{
-				icon: "devicon:react",
 				name: "React",
 			},
 			{
-				icon: "devicon:reactnative-wordmark",
 				name: "React Native",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Nativewind",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 		],
@@ -101,27 +89,21 @@ export const projects: Project[] = [
 		name: "Convertle",
 		stack: [
 			{
-				icon: "simple-icons:expo",
 				name: "Next.js",
 			},
 			{
-				icon: "devicon:react",
 				name: "React",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "logos:ffmpeg-icon",
 				name: "FFmpeg",
 			},
 			{
-				icon: "simple-icons:framer",
 				name: "Motion",
 			},
 		],
@@ -143,23 +125,18 @@ export const projects: Project[] = [
 		name: "Montflix Rebirth",
 		stack: [
 			{
-				icon: "logos:angular-icon",
 				name: "Angular",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "devicon:angularjs",
 				name: "Signals",
 			},
 			{
-				icon: "catppuccin:api-blueprint",
 				name: "TMDB API",
 			},
 		],
@@ -181,39 +158,30 @@ export const projects: Project[] = [
 		name: "Todos",
 		stack: [
 			{
-				icon: "logos:nuxt-icon",
 				name: "Nuxt.js",
 			},
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "material-icon-theme:drizzle",
 				name: "Drizzle ORM",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "devicon:nuxtjs",
 				name: "Nuxt Auth Utils",
 			},
 			{
-				icon: "logos:rxdb",
 				name: "RxDB",
 			},
 			{
-				icon: "simple-icons:shadcnui",
 				name: "Shadcn UI",
 			},
 			{
-				icon: "devicon:postgresql",
 				name: "PostgreSQL",
 			},
 		],
@@ -235,27 +203,21 @@ export const projects: Project[] = [
 		name: "Jonathan",
 		stack: [
 			{
-				icon: "logos:nuxt-icon",
 				name: "Nuxt.js",
 			},
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "devicon:nuxtjs",
 				name: "Nuxt Image",
 			},
 			{
-				icon: "simple-icons:framer",
 				name: "Motion",
 			},
 		],
@@ -278,39 +240,30 @@ export const projects: Project[] = [
 		name: "Nuxt Lucia Auth",
 		stack: [
 			{
-				icon: "logos:nuxt-icon",
 				name: "Nuxt.js",
 			},
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "material-icon-theme:drizzle",
 				name: "Drizzle ORM",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "simple-icons:lucia",
 				name: "Lucia Auth",
 			},
 			{
-				icon: "simple-icons:shadcnui",
 				name: "Shadcn UI",
 			},
 			{
-				icon: "devicon:postgresql",
 				name: "PostgreSQL",
 			},
 			{
-				icon: "logos:pinia",
 				name: "Pinia",
 			},
 		],
@@ -332,23 +285,18 @@ export const projects: Project[] = [
 		name: "Jadoo",
 		stack: [
 			{
-				icon: "logos:nuxt-icon",
 				name: "Nuxt.js",
 			},
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "devicon:nuxtjs",
 				name: "Nuxt Image",
 			},
 		],
@@ -371,35 +319,27 @@ export const projects: Project[] = [
 		name: "KreativeStores",
 		stack: [
 			{
-				icon: "logos:nuxt-icon",
 				name: "Nuxt.js",
 			},
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "simple-icons:express",
 				name: "Express.js",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "simple-icons:shadcnui",
 				name: "Shadcn UI",
 			},
 			{
-				icon: "devicon:nuxtjs",
 				name: "Nuxt Image",
 			},
 			{
-				icon: "logos:pinia",
 				name: "Pinia",
 			},
 		],
@@ -421,23 +361,18 @@ export const projects: Project[] = [
 		name: "Apiwap",
 		stack: [
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "simple-icons:express",
 				name: "Express.js",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "logos:pinia",
 				name: "Pinia",
 			},
 		],
@@ -461,35 +396,27 @@ export const projects: Project[] = [
 		name: "Shop With Hawa",
 		stack: [
 			{
-				icon: "logos:nestjs",
 				name: "Next.js",
 			},
 			{
-				icon: "logos:mongodb-icon",
 				name: "MongoDB",
 			},
 			{
-				icon: "logos:jwt-icon",
 				name: "JWT",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "devicon:firebase",
 				name: "Firebase",
 			},
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:pinia",
 				name: "Pinia",
 			},
 		],
@@ -511,31 +438,24 @@ export const projects: Project[] = [
 		name: "Nuxt Firebase Auth Starter",
 		stack: [
 			{
-				icon: "logos:nuxt-icon",
 				name: "Nuxt.js",
 			},
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "devicon:firebase",
 				name: "Firebase",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "simple-icons:shadcnui",
 				name: "Shadcn UI",
 			},
 			{
-				icon: "logos:pinia",
 				name: "Pinia",
 			},
 		],
@@ -557,27 +477,21 @@ export const projects: Project[] = [
 		name: "SnapEasy",
 		stack: [
 			{
-				icon: "logos:nuxt-icon",
 				name: "Nuxt.js",
 			},
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "devicon:puppeteer",
 				name: "Puppeteer",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "simple-icons:shadcnui",
 				name: "Shadcn UI",
 			},
 		],
@@ -599,31 +513,24 @@ export const projects: Project[] = [
 		name: "Gmail Clone",
 		stack: [
 			{
-				icon: "logos:nuxt-icon",
 				name: "Nuxt.js",
 			},
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "devicon:firebase",
 				name: "Firebase",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:typescript-icon",
 				name: "TypeScript",
 			},
 			{
-				icon: "simple-icons:shadcnui",
 				name: "Shadcn UI",
 			},
 			{
-				icon: "logos:pinia",
 				name: "Pinia",
 			},
 		],
@@ -645,23 +552,18 @@ export const projects: Project[] = [
 		name: "Twitter Clone (React)",
 		stack: [
 			{
-				icon: "devicon:react",
 				name: "React",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:javascript",
 				name: "JavaScript",
 			},
 			{
-				icon: "devicon:firebase",
 				name: "Firebase",
 			},
 			{
-				icon: "logos:redux",
 				name: "Redux",
 			},
 		],
@@ -683,23 +585,18 @@ export const projects: Project[] = [
 		name: "Twitter Clone (Vue)",
 		stack: [
 			{
-				icon: "logos:vue",
 				name: "Vue",
 			},
 			{
-				icon: "devicon:tailwindcss",
 				name: "Tailwind CSS",
 			},
 			{
-				icon: "logos:javascript",
 				name: "JavaScript",
 			},
 			{
-				icon: "devicon:firebase",
 				name: "Firebase",
 			},
 			{
-				icon: "logos:pinia",
 				name: "Pinia",
 			},
 		],

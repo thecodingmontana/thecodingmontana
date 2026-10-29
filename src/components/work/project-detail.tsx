@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import {
 	motion,
 	useIsPresent,
@@ -290,7 +289,6 @@ export function ProjectDetail({
 									className="border-ink/25 flex items-center gap-1.5 rounded-full border px-2.5 py-1 font-mono text-[10px] tracking-[0.1em] uppercase"
 									key={tool.name}
 								>
-									<Icon aria-hidden icon={tool.icon} width={12} />
 									{tool.name}
 								</li>
 							))}
