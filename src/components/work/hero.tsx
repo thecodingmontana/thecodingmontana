@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from "motion/react";
+import { Fragment } from "react";
 import { pad } from "./palette";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
@@ -13,13 +14,8 @@ type Props = {
 export function Hero({ count, activeIndex, activeName }: Props) {
 	const reduce = useReducedMotion();
 	const lines = [
-		[{ text: String(count) }, { text: "small" }, { text: "builds" }],
-		[
-			{ accent: true, text: "between" },
-			{ text: "coffee" },
-			{ text: "&" },
-			{ text: "code." },
-		],
+		[{ text: "Ideas" }, { text: "in." }],
+		[{ accent: true, text: "Products" }, { text: "out." }],
 	];
 
 	return (
@@ -59,24 +55,25 @@ export function Hero({ count, activeIndex, activeName }: Props) {
 						{line.map((word, index) => {
 							const order = lineIndex === 0 ? index : lines[0].length + index;
 							const delay = 0.15 + order * WORD_STAGGER_S;
+							// real spaces between words so the heading copies and reads correctly
 							return (
-								<span
-									className="-mb-[0.12em] inline-block overflow-hidden pb-[0.12em] align-bottom"
-									key={word.text}
-								>
-									<motion.span
-										animate={{ opacity: 1, transform: "translateY(0%)" }}
-										className={`inline-block pr-[0.22em] ${word.accent ? "text-ember" : ""}`}
-										initial={
-											reduce
-												? { opacity: 0 }
-												: { opacity: 1, transform: "translateY(105%)" }
-										}
-										transition={{ delay, duration: 0.9, ease: EASE_OUT }}
-									>
-										{word.text}
-									</motion.span>
-								</span>
+								<Fragment key={word.text}>
+									{index > 0 ? " " : null}
+									<span className="-mb-[0.12em] inline-block overflow-hidden pb-[0.12em] align-bottom">
+										<motion.span
+											animate={{ opacity: 1, transform: "translateY(0%)" }}
+											className={`inline-block ${word.accent ? "text-ember" : ""}`}
+											initial={
+												reduce
+													? { opacity: 0 }
+													: { opacity: 1, transform: "translateY(105%)" }
+											}
+											transition={{ delay, duration: 0.9, ease: EASE_OUT }}
+										>
+											{word.text}
+										</motion.span>
+									</span>
+								</Fragment>
 							);
 						})}
 					</span>
