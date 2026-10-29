@@ -19,8 +19,8 @@ export function Hero({ count, activeIndex, activeName }: Props) {
 	];
 
 	return (
-		<header className="grid gap-y-8 md:grid-cols-[1fr_auto] md:gap-x-16">
-			<div className="flex items-center justify-between font-mono text-[11px] tracking-[0.14em] uppercase md:col-span-2">
+		<header className="grid gap-y-8 md:grid-cols-[auto_minmax(0,24rem)_1fr] md:gap-x-[5vw]">
+			<div className="flex items-center justify-between font-mono text-[11px] tracking-[0.14em] uppercase md:col-span-3">
 				<motion.span
 					animate={{ opacity: 1 }}
 					className="flex items-center gap-1.5 font-sans text-[15px] font-extrabold tracking-[-0.02em] normal-case"

@@ -37,7 +37,7 @@ const DRAG_GAIN = 1.15;
 const MOMENTUM_MS = 260;
 
 // vertical room the hero, captions, timeline and colophon need on desktop
-const DESKTOP_CHROME_PX = 540;
+const DESKTOP_CHROME_PX = 500;
 
 /** Card height as a fraction of its width; matches the landscape screenshots. */
 export const CARD_ASPECT = 10 / 16;
@@ -48,8 +48,8 @@ const measure = (vw: number, vh: number, count: number): RibbonMetrics => {
 	const fitsHeight = (vh - DESKTOP_CHROME_PX) / CARD_ASPECT;
 	const cardW = Math.round(
 		mobile
-			? vw * 0.84
-			: Math.min(560, Math.max(300, Math.min(vw * 0.34, fitsHeight)))
+			? vw * 0.86
+			: Math.min(640, Math.max(320, Math.min(vw * 0.38, fitsHeight)))
 	);
 	const step = Math.round(cardW * (mobile ? 1.06 : 1.08));
 	return {
