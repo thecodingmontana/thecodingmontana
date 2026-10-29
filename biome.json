@@ -30,9 +30,12 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "style": {
         "useConsistentTypeDefinitions": "off"
+      },
+      "performance": {
+        "noJsxPropsBind": "off"
       }
     }
   },
@@ -41,5 +44,5 @@
       "quoteStyle": "double"
     }
   },
-  "extends": ["ultracite/core", "ultracite/react"]
+  "extends": ["ultracite/biome/core", "ultracite/biome/react"]
 }
