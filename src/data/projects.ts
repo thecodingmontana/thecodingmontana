@@ -4,39 +4,34 @@ export const projects: Project[] = [
 	{
 		color: "#673ab7",
 		description:
-			"Zadaci is an all-in-one project management platform built to help you and your team get things done faster.",
+			"Zadaci is a collaborative project and task manager for teams. Plan projects in the view that suits the work, keep docs and meeting notes next to them, and share exactly what each person should see.",
 		github: "https://github.com/thecodingmontana/zadaci",
 		highlights: [
-			"Built using Nuxt.js and TypeScript",
-			"Responsive design with shadcn-ui + Tailwind CSS",
-			"Supabase + PostgreSQL + Drizzle ORM for typed backend.",
-			"Fast load times and intuitive navigation optimized for mobile UX.",
+			"TanStack Start (React 19) with a GraphQL Yoga API and Apollo Client.",
+			"Postgres on Supabase with Drizzle ORM, and live updates over Supabase Realtime.",
+			"Better Auth sign-in with Google, email links, passkeys and two-step codes.",
+			"Notion-style notes on Tiptap and an in-app assistant built on TanStack AI.",
 		],
 		image_url: "/images/zadaci.png",
 		is_working: true,
 		name: "Zadaci",
 		stack: [
-			{
-				name: "Nuxt.js",
-			},
-			{
-				name: "TypeScript",
-			},
-			{
-				name: "Supabase",
-			},
-			{
-				name: "Drizzle ORM",
-			},
-			{
-				name: "Tailwind CSS",
-			},
-			{
-				name: "Shadcn UI",
-			},
-			{
-				name: "PostgreSQL",
-			},
+			{ name: "TanStack Start" },
+			{ name: "React" },
+			{ name: "TypeScript" },
+			{ name: "GraphQL Yoga" },
+			{ name: "Apollo Client" },
+			{ name: "PostgreSQL" },
+			{ name: "Supabase" },
+			{ name: "Drizzle ORM" },
+			{ name: "Better Auth" },
+			{ name: "Tiptap" },
+			{ name: "Tailwind CSS" },
+			{ name: "Radix UI" },
+			{ name: "Motion" },
+			{ name: "Cloudinary" },
+			{ name: "Resend" },
+			{ name: "TanStack AI" },
 		],
 		tagline: "Say Hello 👋 to Effortless Project Management",
 		website: "https://zadaci.vercel.app",
