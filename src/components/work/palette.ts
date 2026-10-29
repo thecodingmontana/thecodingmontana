@@ -27,3 +27,18 @@ export const wrap = (v: number, min: number, max: number) => {
 	const range = max - min;
 	return ((((v - min) % range) + range) % range) + min;
 };
+
+/** Dark-to-light ramp of a project's brand colour for the card glow. */
+export const shadesOf = (hex: string) => {
+	const channels = [1, 3, 5].map((i) =>
+		Number.parseInt(hex.slice(i, i + 2), 16)
+	);
+	const shift = (by: number, scale = 1) =>
+		`rgb(${channels.map((c) => Math.min(255, Math.floor(c * scale) + by)).join(", ")})`;
+	return {
+		dark: shift(0, 0.3),
+		light: shift(60),
+		lighter: shift(120),
+		medium: hex,
+	};
+};

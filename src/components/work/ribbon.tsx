@@ -3,7 +3,7 @@ import type { Project } from "@/types";
 import { PosterCard } from "./poster-card";
 import { CARD_ASPECT, type useRibbon } from "./use-ribbon";
 
-const CAPTION_SPACE_PX = 130;
+const CAPTION_SPACE_PX = 80;
 
 type Props = {
 	projects: Project[];

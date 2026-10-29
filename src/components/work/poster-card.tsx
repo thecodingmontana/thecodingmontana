@@ -7,7 +7,7 @@ import {
 } from "motion/react";
 import type React from "react";
 import type { Project } from "@/types";
-import { inkFor, liftFor, pad, slugify, tiltFor, wrap } from "./palette";
+import { liftFor, pad, shadesOf, slugify, tiltFor, wrap } from "./palette";
 import type { RibbonMetrics } from "./use-ribbon";
 
 const ENTRANCE_DELAY_S = 0.55;
@@ -34,7 +34,7 @@ export function PosterCard({
 }: Props) {
 	const reduce = useReducedMotion();
 	const { cardW, inset, step, total, vw } = metrics;
-	const ink = inkFor(index);
+	const shade = shadesOf(project.color);
 
 	const x = useTransform(
 		offset,
@@ -79,48 +79,54 @@ export function PosterCard({
 					search={{ work: slugify(project.name) }}
 					to="/"
 				>
-					<div
-						className="relative aspect-[16/10] overflow-hidden rounded-[3px] shadow-[0_18px_30px_-18px_rgba(23,21,18,0.55)] transition-transform duration-300 ease-(--ease-out) group-hover:-translate-y-2"
-						style={{ backgroundColor: ink }}
-					>
-						<img
-							alt=""
-							className="absolute inset-0 size-full object-cover object-top-left transition-transform duration-500 ease-(--ease-out) select-none group-hover:scale-[1.05]"
-							draggable={false}
-							height={500}
-							loading={index < 6 ? "eager" : "lazy"}
-							src={
-								project.image_url.startsWith("/")
-									? project.image_url
-									: `/${project.image_url}`
-							}
-							width={800}
-						/>
-						{/* ink frame keeps each card tied to its riso colour */}
-						<span
-							className="pointer-events-none absolute inset-0 border-[5px]"
-							style={{ borderColor: ink }}
-						/>
+					<div className="border-ink/15 bg-ink/5 rounded-[22px] border p-1.5 shadow-[0_24px_40px_-24px_rgba(23,21,18,0.55)] transition-transform duration-300 ease-(--ease-out) group-hover:-translate-y-2">
+						<div
+							className="relative flex aspect-[16/10] flex-col overflow-hidden rounded-[16px]"
+							style={{
+								background: `linear-gradient(188.62deg, ${shade.dark} 49.9%, ${shade.medium} 81.7%, ${shade.light} 93.88%, ${shade.lighter} 113.5%)`,
+							}}
+						>
+							<div
+								className="flex items-start justify-between gap-4 px-[7%] pt-[6%]"
+								style={{ color: project.color }}
+							>
+								<p className="line-clamp-2 text-[clamp(0.8rem,1.15vw,1.15rem)] leading-snug font-medium">
+									{project.tagline}
+								</p>
+								<span
+									aria-hidden
+									className="shrink-0 text-[clamp(0.9rem,1.3vw,1.3rem)] transition-transform duration-300 ease-(--ease-out) group-hover:translate-x-1"
+								>
+									→
+								</span>
+							</div>
+							<img
+								alt=""
+								className="mx-auto mt-auto w-[85%] translate-y-[6%] rounded-t-md border border-white/20 transition-[rotate,scale] duration-300 ease-(--ease-out) select-none group-hover:scale-[1.06] group-hover:-rotate-2"
+								draggable={false}
+								height={500}
+								loading={index < 6 ? "eager" : "lazy"}
+								src={
+									project.image_url.startsWith("/")
+										? project.image_url
+										: `/${project.image_url}`
+								}
+								style={{ boxShadow: `0 0 30px ${project.color}` }}
+								width={800}
+							/>
+						</div>
 					</div>
 
-					<motion.div className="mt-4 pr-2" style={{ opacity: captionOpacity }}>
-						<div className="flex items-baseline gap-3">
-							<span className="text-ember font-mono text-[11px] tracking-wide">
-								{pad(index + 1)}
-							</span>
-							<h3 className="text-[clamp(1.15rem,1.4vw,1.4rem)] leading-tight font-bold tracking-[-0.02em]">
-								{project.name}
-							</h3>
-						</div>
-						<p className="text-ink/65 mt-1.5 line-clamp-2 text-sm leading-snug">
-							{project.tagline}
-						</p>
-						<span
-							className="mt-3 inline-block rounded-full px-2.5 py-0.5 font-mono text-[10px] tracking-[0.12em] uppercase"
-							style={{ backgroundColor: ink }}
-						>
-							{project.stack[0]?.name ?? "Code"}
+					<motion.div
+						className="mt-4 flex items-baseline gap-3 pr-2"
+						style={{ opacity: captionOpacity }}
+					>
+						<span className="text-ember font-mono text-[11px] tracking-wide">
+							{pad(index + 1)}
 						</span>
+						<h3 className="text-[clamp(1.15rem,1.4vw,1.4rem)] leading-tight font-bold tracking-[-0.02em]">
+							{project.name}
+						</h3>
 					</motion.div>
 				</Link>
 			</motion.div>
