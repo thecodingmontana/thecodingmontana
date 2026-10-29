@@ -31,7 +31,7 @@ export function Timeline({ projects, ribbon }: Props) {
 				</motion.div>
 			</div>
 
-			<ol className="relative h-7">
+			<ol className="relative h-8">
 				{projects.map((project, index) => {
 					const isActive = index === active;
 					const showLabel = index % 5 === 0 || index === count - 1;
@@ -44,7 +44,7 @@ export function Timeline({ projects, ribbon }: Props) {
 							<button
 								aria-current={isActive ? "true" : undefined}
 								aria-label={`${pad(index + 1)} ${project.name}`}
-								className="group flex min-h-6 min-w-6 cursor-pointer flex-col items-center px-1.5 outline-none"
+								className="group flex min-h-8 min-w-6 cursor-pointer flex-col items-center px-1.5 outline-none"
 								onClick={() => goTo(index)}
 								type="button"
 							>
